@@ -14,7 +14,8 @@
     let terminal = document.getElementById('terminal');
     let input = document.getElementById('input');
 
-    document.getElementById('submit').addEventListener('click', submit);
+    let submitBtn = document.getElementById('submit');
+    submitBtn.addEventListener('click', submit);
     input.addEventListener('keypress', (e) => e.code === 'Enter' ? submit() : '');
 
     function submit() {
@@ -92,8 +93,13 @@
             //case 'count':
             //   theArray.count();
 
-            //case 'end':
-            //   theArray.end();
+            case 'end': 
+                //theArray.end();
+                terminal.value+='Finished\n';
+                input.disabled = true;  
+                submitBtn.disabled = true;  
+                break;
+
             
             default:
                 //refactor this into a function printError(msg)
