@@ -76,11 +76,21 @@
                 break;
 				}
 			}
-			
-		
 
-            //case 'delete ':
-            //   theArray.delete();
+
+
+            case 'delete':
+                //theArray.delete();
+                let indexOfArr = Number(commandTokens[1]);
+                if(indexOfArr < 0 || indexOfArr >theArray.length-1) {
+                    terminal.value+=`Error: invalid index ${indexOfArr}\n`;
+                    break;
+                } else {
+                    terminal.value += theArray.slice(0, indexOfArr)
+                            .concat(theArray.slice(indexOfArr + 1))
+                            .slice(0).join(' ') + '\n';
+                    break;
+                }
 
             //case 'roll left':
             //   theArray.rollLeft();
