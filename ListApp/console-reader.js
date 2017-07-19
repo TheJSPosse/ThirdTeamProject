@@ -34,10 +34,12 @@
 				theArray.push(commandTokens[1]);
 				 terminal.value+=theArray.join(' ')+'\n';
                 break;
-            //    theArray.append();
+          
 
-            //case 'prepend':
-            //    theArray.append();
+            case 'prepend':
+				theArray.unshift(commandTokens[1]);
+				 terminal.value+=theArray.join(' ')+'\n';
+                break;
 
             //refactor this command in its own file!
             case 'reverse':
