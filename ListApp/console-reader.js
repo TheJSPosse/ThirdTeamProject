@@ -41,7 +41,7 @@
 				 terminal.value+=theArray.join(' ')+'\n';
                 break;
 
-            //refactor this command in its own file!
+            
             case 'reverse':
                 ///theArray.reverseArray();
                 theArray.reverse();
@@ -49,8 +49,16 @@
                 terminal.value+=theArray.join(' ')+'\n';
                 break;
 
-            //case 'insert ':
-            //   theArray.append();
+            case 'insert':
+			let index = Number(commandTokens[1]);
+				if(index < 0 || index >theArray.length-1) {
+					terminal.value+="Error: invalid index\n";
+					break;
+				} else {
+               theArray.splice(commandTokens[1], 0, commandTokens[2]);
+			   terminal.value+=theArray.join(' ')+'\n';
+                break;
+				}
 
             //case 'delete ':
             //   theArray.delete();
