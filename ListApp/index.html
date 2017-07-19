@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Team 3</title>
 </head>
+
 <body>
- <textarea id="terminal" disabled rows="20" cols="68">
+    <textarea id="terminal" disabled rows="20" cols="68">
 </textarea> <br>
-<input id="input" type="text" size="60">
-<button id="submit">GO</button>
-<script src="./console-reader.js"></script>
+    <input id="input" type="text" size="60" placeholder="give me a string to work with!">
+    <button id="submit">GO</button>
+    <div id="instruction" style="width:490px">
+        <ul>
+            <li>append &lt;string&gt; – adds the specified one word string at the end of the list and prints the list (space separated).</li>
+            <li>prepend &lt;string&gt; – inserts the specified one word string at the start of the list and prints the list.</li>
+            <li>reverse – reorders the list items in reversed order (from its end to its start) and prints the list.</li>
+            <li>insert &lt;index&gt; &lt;string&gt; – inserts the specified one word string at the specified position in the list and prints the list after that.</li>
+            <li>delete &lt;index&gt; – deletes the one word string at the specified position in the list and prints the list.</li>
+            <li>roll left – rolls the list on the left and prints the list. The first list item comes last.</li>
+            <li>roll right – rolls the list on the right and prints the list. The last list item comes first.</li>
+            <li>sort – sorts the list in alphabetical order and prints the list.</li>
+            <li>count &lt;string&gt; – prints how many times the specified one word string occurs in the list (case sensitive).</li>
+            <li>end – stops the execution of commands. Print “Finished” as command output.</li>
+        </ul>
+    </div>
+    <script src="./console-reader.js"></script>
 </body>
+
 </html>
