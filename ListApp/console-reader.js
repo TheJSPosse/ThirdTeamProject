@@ -30,7 +30,10 @@
 
         switch (commandTokens[0]) {
 
-            //case 'append':
+            case 'append':
+				theArray.push(commandTokens[1]);
+				 terminal.value+=theArray.join(' ')+'\n';
+                break;
             //    theArray.append();
 
             //case 'prepend':
