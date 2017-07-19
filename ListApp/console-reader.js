@@ -31,15 +31,25 @@
         switch (commandTokens[0]) {
 
             case 'append':
+			if(commandTokens.length != 2) {
+				terminal.value+="Error: invalid command parameters\n";
+				break;
+			} else {
 				theArray.push(commandTokens[1]);
 				 terminal.value+=theArray.join(' ')+'\n';
                 break;
-          
+			}
+		
 
             case 'prepend':
+			if(commandTokens.length != 2) {
+				terminal.value+="Error: invalid command parameters\n";
+				break;
+			} 
 				theArray.unshift(commandTokens[1]);
 				 terminal.value+=theArray.join(' ')+'\n';
                 break;
+	
 
             
             case 'reverse':
@@ -50,8 +60,12 @@
                 break;
 
             case 'insert':
-			let index = Number(commandTokens[1]);
-				if(index < 0 || index >theArray.length-1) {
+			if(commandTokens.length != 3) {
+				terminal.value+="Error: invalid command parameters\n";
+				break;
+			} else  {
+				let index = Number(commandTokens[1]);
+				if(index < 0 || index >theArray.length-1 || (Number(commandTokens[1]) != commandTokens[1])) {
 					terminal.value+="Error: invalid index\n";
 					break;
 				} else {
@@ -59,6 +73,9 @@
 			   terminal.value+=theArray.join(' ')+'\n';
                 break;
 				}
+			}
+			
+		
 
             //case 'delete ':
             //   theArray.delete();
