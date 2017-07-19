@@ -26,6 +26,7 @@
             terminal.value+=theArray.join(' ')+'\n';   //print array    
             initialized = true;
             input.value = '';
+            input.placeholder = 'give me a command!';
             return;
         }
 
