@@ -104,6 +104,20 @@
             //case 'roll right':
             //   theArray.rollRight();
 
+            case 'roll':
+                if(commandTokens[1] == 'left'){
+                    let rolledStr = theArray.shift();
+                    theArray.push(rolledStr);
+                }else if(commandTokens[1] == 'right'){
+                    let lastStr = theArray.pop();
+                    theArray.unshift(lastStr);
+                }else{
+                    terminal.value += "Error: invalid command parameter\n"
+                    break;
+                }
+                terminal.value += theArray.join(' ');
+                break;
+
             case 'sort':
 
                 theArray=theArray.sort();
