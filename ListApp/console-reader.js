@@ -110,8 +110,16 @@
             terminal.value+=theArray.join(' ') + '\n';
             break;
 
-            //case 'count':
-            //   theArray.count();
+            case 'count':
+                //   theArray.count();
+                let count = 0;
+                let index = theArray.indexOf(commandTokens[1]);
+                while (index != -1) {
+                    count++;
+                    index = theArray.indexOf(commandTokens[1], index + 1);
+                }
+                terminal.value += count + '\n';
+                break;
 
             case 'end': 
                 //theArray.end();
