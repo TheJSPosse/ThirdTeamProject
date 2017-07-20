@@ -86,11 +86,12 @@
                     terminal.value+=`Error: invalid index ${indexOfArr}\n`;
                     break;
                 } else {
-                    terminal.value += theArray.slice(0, indexOfArr)
-                            .concat(theArray.slice(indexOfArr + 1))
-                            .slice(0).join(' ') + '\n';
+                    theArray=theArray.slice(0, indexOfArr)
+                        .concat(theArray.slice(indexOfArr + 1))
+                        .slice(0);
+                    terminal.value += theArray.join(' ') + '\n';
                     break;
-                }
+}
 
             //case 'roll left':
             //   theArray.rollLeft();
@@ -98,8 +99,10 @@
             //case 'roll right':
             //   theArray.rollRight();
 
-            //case 'sort ':
-            //   theArray.sort();
+            case 'sort':
+            theArray.sort();
+			 terminal.value += theArray.join(' ') + '\n';
+			 break;
 
             //case 'count':
             //   theArray.count();
