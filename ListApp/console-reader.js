@@ -99,8 +99,12 @@
             //case 'roll right':
             //   theArray.rollRight();
 
-            //case 'sort ':
+            case 'sort':
             //   theArray.sort();
+
+                theArray=theArray.sort();
+            terminal.value+=theArray.join(' ') + '\n';
+            break;
 
             //case 'count':
             //   theArray.count();
