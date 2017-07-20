@@ -108,6 +108,7 @@
                 if(commandTokens[1] == 'left'){
                     let rolledStr = theArray.shift();
                     theArray.push(rolledStr);
+                    console.log('\n')
                 }else if(commandTokens[1] == 'right'){
                     let lastStr = theArray.pop();
                     theArray.unshift(lastStr);
@@ -115,7 +116,7 @@
                     terminal.value += "Error: invalid command parameter\n"
                     break;
                 }
-                terminal.value += theArray.join(' ');
+                terminal.value += theArray.join(' ') + '\n';
                 break;
 
             case 'sort':
