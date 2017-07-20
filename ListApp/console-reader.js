@@ -86,9 +86,10 @@
                     terminal.value+=`Error: invalid index ${indexOfArr}\n`;
                     break;
                 } else {
-                    terminal.value += theArray.slice(0, indexOfArr)
-                            .concat(theArray.slice(indexOfArr + 1))
-                            .slice(0).join(' ') + '\n';
+                    theArray=theArray.slice(0, indexOfArr)
+                        .concat(theArray.slice(indexOfArr + 1))
+                        .slice(0);
+                    terminal.value += theArray.join(' ') + '\n';
                     break;
                 }
 
