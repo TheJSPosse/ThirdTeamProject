@@ -55,11 +55,16 @@
 
             
             case 'reverse':
+                if(commandTokens.length != 1) {
+				    terminal.value+="Error: invalid command parameters\n";
+                break;
+                } else {
                 ///theArray.reverseArray();
                 theArray.reverse();
                 //refactor this into a printArray() function
                 terminal.value+=theArray.join(' ')+'\n';
                 break;
+                }
 
             case 'insert':
 			if(commandTokens.length != 3) {
