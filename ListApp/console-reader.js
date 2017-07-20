@@ -100,9 +100,10 @@
             //   theArray.rollRight();
 
             case 'sort':
-            theArray.sort();
-			 terminal.value += theArray.join(' ') + '\n';
-			 break;
+
+                theArray=theArray.sort();
+            terminal.value+=theArray.join(' ') + '\n';
+            break;
 
             //case 'count':
             //   theArray.count();
